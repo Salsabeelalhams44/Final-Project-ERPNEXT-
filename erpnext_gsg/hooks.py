@@ -36,6 +36,13 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+doctype_js = {
+	"Journal Entry" : "public/js/journal_entry.js"
+}
+doctype_js = {
+	"Payment Entry" : "public/js/payment_entry.js"
+}
+
 # Home Pages
 # ----------
 
@@ -102,6 +109,15 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
+doc_events = {
+	"Material Request": {
+		"on_submit": "erpnext_gsg.erpnext_gsg.doc_events.material_request.submit_material_request_to_stock_entry",
+	},
+	"Attendance": {
+		"validate": "erpnext_gsg.erpnext_gsg.doc_events.attendance_event.calculate_working_hours",
+	}
+	
+}
 
 # Scheduled Tasks
 # ---------------
